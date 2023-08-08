@@ -3,7 +3,7 @@ import psutil
 import subprocess
 import cpuinfo
 import socket
-from pynvml import nvmlInit, nvmlDeviceGetCount, nvmlDeviceGetHandleByIndex, nvmlDeviceGetName, nvmlDeviceGetMemoryInfo, nvmlDeviceGetUtilizationRates, nvmlShutdown
+import GPUtil
 
 def get_motherboard_info():
     try:
@@ -66,22 +66,18 @@ def show_processor_info():
 
 def show_gpu_info():
     try:
-        nvmlInit()
-        device_count = nvmlDeviceGetCount()
-        for i in range(device_count):
-            handle = nvmlDeviceGetHandleByIndex(i)
-            device_name = nvmlDeviceGetName(handle).decode('utf-8')
-            memory_info = nvmlDeviceGetMemoryInfo(handle)
-            utilization = nvmlDeviceGetUtilizationRates(handle)
-
-            print(f"------ Graphics card {i + 1} ------")
-            print(f"Model: {device_name}")
-            print(f"Total memory (MB): {memory_info.total // (1024 ** 2)}")
-            print(f"Used memory (MB): {memory_info.used // (1024 ** 2)}")
-            print(f"GPU usage (%): {utilization.gpu}%")
-            print(f"Memory usage (%): {utilization.memory}%")
-        nvmlShutdown()
-
+        gpus = GPUtil.getGPUs()
+        if len(gpus) == 0:
+            print('None GPU')
+        else:
+            for i, gpu in enumerate(gpus):
+                print(f"------ GPU {i + 1} ------")
+                print(f"Model: {gpu.name}")
+                print(f"Total memory (MB): {gpu.memoryTotal}")
+                print(f"Used memory (MB): {gpu.memoryUsed}")
+                print(f"Free memory (MB): {gpu.memoryFree}")
+                print(f"GPU usage (%): {gpu.load * 100}%")
+                print(f"Memory usage (%): {(gpu.memoryUsed / gpu.memoryTotal) * 100}%")
     except Exception as e:
         print(f"Error occurred while getting graphics card info: {e}")
 
