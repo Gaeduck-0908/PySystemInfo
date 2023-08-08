@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name='PySystemInfo',
-    version='1.0.2',
+    version='1.0.3',
     description='It s a package that allows you to easily find out the system information of your computer through Python',
     author='Gaeduck',
     author_email='gms8757@naver.com',
@@ -11,6 +11,7 @@ setuptools.setup(
     packages= setuptools.find_packages(),
     keywords=['Sysinfo', 'system', 'SystemInfo', 'Python system', 'Python System info'],
     python_requires='>=3',
+    license='MIT',
     classifiers=[
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.1',
