@@ -97,6 +97,3 @@ def print_system_info():
             print(f"Free memory (MB): {gpu[3]}")
             print(f"GPU usage (%): {gpu[4]}%")
             print(f"Memory usage (%): {gpu[5]}%")
-
-if __name__ == "__main__":
-    print_system_info()
