@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='PySystemInfo',
-    version='1.0.0',
+    version='1.0.1',
     description='It s a package that allows you to easily find out the system information of your computer through Python',
     author='Gaeduck',
     author_email='gms8757@naver.com',
