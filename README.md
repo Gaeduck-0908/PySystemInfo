@@ -96,7 +96,3 @@ print(PySystemInfo.get_ram_info())
 ```
 # ETC
 > For improvements, please call Full Requests
-> 
-> Mail : gms8757@naver.com
-> 
-
