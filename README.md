@@ -99,4 +99,4 @@ print(PySystemInfo.get_ram_info())
 > 
 > Mail : gms8757@naver.com
 > 
-> [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FGaeduck-0908%2FPySystemInfo&count_bg=%23000000&title_bg=%23000000&icon=&icon_color=%23FFFFFF&title=View&edge_flat=false)]([https://hits.seeyoufarm.com](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FGaeduck-0908%2FPySystemInfo&count_bg=%23000000&title_bg=%23000000&icon=&icon_color=%23FFFFFF&title=View&edge_flat=false)https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FGaeduck-0908%2FPySystemInfo&count_bg=%23000000&title_bg=%23000000&icon=&icon_color=%23FFFFFF&title=View&edge_flat=false)
+
